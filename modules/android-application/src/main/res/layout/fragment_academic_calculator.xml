@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AcademicCalculatorFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/developedBy1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/developedBy"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/academicMarginRight"
+            app:layout_constraintStart_toStartOf="@+id/academicMarginLeft" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/academicMarginLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.0625" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/academicMarginRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9375" />
+
+        <EditText
+            android:id="@+id/grade1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:ems="10"
+            android:hint="@string/grade1"
+            android:inputType="numberDecimal"
+            app:layout_constraintBottom_toTopOf="@+id/grade2"
+            app:layout_constraintEnd_toStartOf="@+id/academicMarginRight"
+            app:layout_constraintStart_toStartOf="@+id/academicMarginLeft" />
+
+        <EditText
+            android:id="@+id/grade2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:ems="10"
+            android:hint="@string/grade2"
+            android:inputType="numberDecimal"
+            app:layout_constraintBottom_toTopOf="@+id/grade3"
+            app:layout_constraintEnd_toStartOf="@+id/academicMarginRight"
+            app:layout_constraintStart_toStartOf="@+id/academicMarginLeft" />
+
+        <EditText
+            android:id="@+id/grade3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:ems="10"
+            android:hint="@string/grade3"
+            android:inputType="numberDecimal"
+            app:layout_constraintBottom_toTopOf="@+id/academicaMiddleHorizontal"
+            app:layout_constraintEnd_toStartOf="@+id/academicMarginRight"
+            app:layout_constraintStart_toStartOf="@+id/academicMarginLeft" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/academicaMiddleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/situationLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/situation"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/academicMiddleVertical"
+            app:layout_constraintTop_toTopOf="@+id/academicaMiddleHorizontal" />
+
+        <TextView
+            android:id="@+id/situationScreen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/academicMarginRight"
+            app:layout_constraintStart_toStartOf="@+id/academicMiddleVertical"
+            app:layout_constraintTop_toTopOf="@+id/academicaMiddleHorizontal" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/academicMiddleVertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <Button
+            android:id="@+id/buttonCalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/calculate"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toStartOf="@+id/academicMarginRight"
+            app:layout_constraintStart_toStartOf="@+id/academicMarginLeft" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
